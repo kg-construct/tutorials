@@ -18,7 +18,7 @@
 
 :map_stoptimes_0 rml:logicalSource :source_0.
 :source_0 a rml:LogicalSource;
-    rml:source "./STOP_TIMES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/STOP_TIMES.csv";
     rml:referenceFormulation ql:CSV.
 :map_stoptimes_0 a rr:TriplesMap;
     rdfs:label "stoptimes".
@@ -114,7 +114,7 @@
 :pom_9 rr:objectMap :om_9.
 :map_trips_0 rml:logicalSource :source_1.
 :source_1 a rml:LogicalSource;
-    rml:source "./TRIPS.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/TRIPS.csv";
     rml:referenceFormulation ql:CSV.
 :map_trips_0 a rr:TriplesMap;
     rdfs:label "trips".
@@ -195,7 +195,7 @@
 :pom_18 rr:objectMap :om_19.
 :map_routes_0 rml:logicalSource :source_2.
 :source_2 a rml:LogicalSource;
-    rml:source "./ROUTES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/ROUTES.csv";
     rml:referenceFormulation ql:CSV.
 :map_routes_0 a rr:TriplesMap;
     rdfs:label "routes".
@@ -282,7 +282,7 @@
 :pom_27 rr:objectMap :om_28.
 :map_agency_0 rml:logicalSource :source_3.
 :source_3 a rml:LogicalSource;
-    rml:source "./AGENCY.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/AGENCY.csv";
     rml:referenceFormulation ql:CSV.
 :map_agency_0 a rr:TriplesMap;
     rdfs:label "agency".
@@ -354,7 +354,7 @@
     rr:termType rr:IRI.
 :map_stops_0 rml:logicalSource :source_4.
 :source_4 a rml:LogicalSource;
-    rml:source "./STOPS.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/STOPS.csv";
     rml:referenceFormulation ql:CSV.
 :map_stops_0 a rr:TriplesMap;
     rdfs:label "stops".
@@ -479,7 +479,7 @@
 :pom_47 rr:objectMap :om_48.
 :map_services1_0 rml:logicalSource :source_5.
 :source_5 a rml:LogicalSource;
-    rml:source "./CALENDAR.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/CALENDAR.csv";
     rml:referenceFormulation ql:CSV.
 :map_services1_0 a rr:TriplesMap;
     rdfs:label "services1".
@@ -503,7 +503,7 @@
 :pom_49 rr:objectMap :om_50.
 :map_services2_0 rml:logicalSource :source_6.
 :source_6 a rml:LogicalSource;
-    rml:source "./CALENDAR_DATES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/CALENDAR_DATES.csv";
     rml:referenceFormulation ql:CSV.
 :map_services2_0 a rr:TriplesMap;
     rdfs:label "services2".
@@ -527,7 +527,7 @@
 :pom_51 rr:objectMap :om_52.
 :map_calendar_date_rules_0 rml:logicalSource :source_7.
 :source_7 a rml:LogicalSource;
-    rml:source "./CALENDAR_DATES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/CALENDAR_DATES.csv";
     rml:referenceFormulation ql:CSV.
 :map_calendar_date_rules_0 a rr:TriplesMap;
     rdfs:label "calendar_date_rules".
@@ -565,7 +565,7 @@
     rr:datatype xsd:boolean.
 :map_calendar_rules_0 rml:logicalSource :source_8.
 :source_8 a rml:LogicalSource;
-    rml:source "./CALENDAR.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/CALENDAR.csv";
     rml:referenceFormulation ql:CSV.
 :map_calendar_rules_0 a rr:TriplesMap;
     rdfs:label "calendar_rules".
@@ -673,7 +673,7 @@
     rr:datatype xsd:date.
 :map_feed_0 rml:logicalSource :source_9.
 :source_9 a rml:LogicalSource;
-    rml:source "./FEED_INFO.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/FEED_INFO.csv";
     rml:referenceFormulation ql:CSV.
 :map_feed_0 a rr:TriplesMap;
     rdfs:label "feed".
@@ -747,7 +747,7 @@
     rr:termType rr:Literal.
 :map_shapes_0 rml:logicalSource :source_10.
 :source_10 a rml:LogicalSource;
-    rml:source "./SHAPES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/SHAPES.csv";
     rml:referenceFormulation ql:CSV.
 :map_shapes_0 a rr:TriplesMap;
     rdfs:label "shapes".
@@ -771,7 +771,7 @@
 :pom_73 rr:objectMap :om_74.
 :map_shapePoints_0 rml:logicalSource :source_11.
 :source_11 a rml:LogicalSource;
-    rml:source "./SHAPES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/SHAPES.csv";
     rml:referenceFormulation ql:CSV.
 :map_shapePoints_0 a rr:TriplesMap;
     rdfs:label "shapePoints".
@@ -827,7 +827,7 @@
     rr:termType rr:Literal.
 :map_frequencies_0 rml:logicalSource :source_12.
 :source_12 a rml:LogicalSource;
-    rml:source "./FREQUENCIES.csv";
+    rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/main/kg4di_belgium_nov2022/kg_construction/data/FREQUENCIES.csv";
     rml:referenceFormulation ql:CSV.
 :map_frequencies_0 a rr:TriplesMap;
     rdfs:label "frequencies".
