@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Andrea Cimmino & Ana Iglesias">
+
+    <title>KGCV2023</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("December 5, 2023 16:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        // document.getElementById("demo").innerHTML = days + " days " //+ hours + "h "+ minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        //if (distance < 0) {
+        //  clearInterval(x);
+        //  document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+      //}, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <h3 class="navbar-brand js-scroll-trigger">Date of the event:</h3>
+    <h3 id=demo>05-12-2023</h3>
+     <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">
+
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/profile.jpg" alt="">
+        </span>
+      </a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Description</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#audience">Audience</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#program">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#presenters">Presenters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#materials">Materials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a>
+          </li>
+        </ul>
+      </div>
+      <div style="color: white">
+        <a href="https://oeg.fi.upm.es/">
+        <img src="static/img/oeg-logo.png" width="50px" />
+        <a href="https://www.upm.es/">
+        <img src="static/img/upm.png" width="75px" />
+        <a href="https://wms.cs.kuleuven.be/dtai">
+        <img src="static/img/dtai.png" width="75px" />
+        <a href="https://www.kuleuven.be/english/kuleuven">
+        <img src="static/img/kuleuven.png" width="100px" />
+
+        <p style="color: white"><strong>Organized by OEG (UPM) and DTAI (KU Leuven)</strong></p></a>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" style="text-align:justify">
+        <div class="my-auto">
+          <h1 class="mb-0">
+            <span class="text-primary">Declarative Construction and Validation of Knowledge Graphs</span>
+          </h1>
+          <div class="subheading mb-5">Co-located with the Twelfth International COnference on Knowledge Capture (K-CAP 2023)</div>
+
+          <p class="lead mb-5">The wide adoption of knowledge graphs have boosted the development of techniques and tools to support their use along their life cycle. Among them we focus on declarative approaches designed for knowledge graph construction, that rely on the use of mapping languages (e.g. R2RML, RML, SPARQL-Anything) to describe the transformation process.
+The preliminary limitations of these technologies have been progressively addressed with the efforts of the community so as to overcome their limitations and motivate their adoption. Our objective with this tutorial is to explain the progress on declarative mapping technologies to tackle more complex use cases, and show from a practical perspective the tools and methods that ease the mapping creation process and integration in KG construction pipelines. Furthermore, we also want to present how declarative approaches can also be exploited for constructing, but validating knowledge graphs. We aim to show the benefits that declarative approaches can bring into the production of high-quality knowledge graphs, and assists them along their life cycle.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://github.com/kg-construct/kcap-kgcv-tutorial-2023">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/kg-construct">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="audience" style="text-align:justify">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Audience</span></h2>
+          <p class="lead mb-5">The target audience for this tutorial is researchers and practitioners both from industry and academia who are interested in integrating heterogeneous data on the web using semantic technologies. The tools that will be presented during the tutorial will be available online. Knowledge about standard mapping languages (R2)RML is not required. We will give a brief summary of the practical use of these proposals, as they will be a key factor among all the solutions that will be presented in the tutorial.</p>
+        </div>
+      </section> -->
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="program" style="text-align:justify">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Program</span></h2>
+
+
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Declarative Knowledge Graph Construction</h3>
+              <p><b>Presenter: Ana Iglesias-Molina</b></p>
+              <div class="subheading mb-1">Part I: Getting started with mapping languages</div>
+              <p>Declarative mappings are commonly used for specifying how a dataset can be transformed into an RDF graph according to the schema provided usually by an ontology or vocabulary. We present one of the most popular languages used to this end, RML, and the novel features of its most recent release.</p>
+
+              <div class="subheading mb-1">Part II: Creating declarative mappings</div>
+              <p>Different approaches for mapping creation will be presented. Then, a guided hands-on session will be conducted with atendees to create mappings using YARRRML, a user-friendly serialization for RML.</p>
+
+              <div class="subheading mb-1">Part III: Constructing RDF graphs using RML mappings</div>
+              <p>There are different approaches and implementations to construct RDF graphs from heterogeneous data sources. We provide an overview of these approaches focusing on the ones that can be easily integrated into automated pipelines.</p>
+            </div>
+
+          </div>
+
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Declarative Knowledge Graph Validation</h3>
+              <p><b>Presenter: Xuemin Duan</b></p>
+              <div class="subheading mb-1">Part IV: Introducing SHACL shapes</div>
+              <p>SHACL was proposed for validating RDF graphs against a set of constraints.
+              We will first go through the core constraint components and introduce the syntactic constraints related to SHACL Core. Then, we will use
+              shacl-shacl, SHACL shapes that are used to verify whether shapes are well-formed.
+              Subsequently, we will explore how to use shacl-shacl to validate the created SHACL shapes.</p>
+
+              <div class="subheading mb-1">Part V: Translating RML to SHACL and validating RDF graphs</div>
+              <p> RML2SHACL is a tool that translates RML mappings to SHACL shapes based on a set of correspondences.
+              We will first elucidate the process of automatically generating SHACL shapes from RML using this tool.
+              Subsequently, we will employ PySHACL, a Python library designed for the validation of RDF graphs against SHACL shapes, to validate the graphs constructed in previous sessions.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="presenters" style="text-align:justify">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Presenters</span></h2>
+
+          <!--<h2 class="mb-5">Part I: Semantic Annotations and Efficient Knowledge Graph Generation</h2>-->
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Ana Iglesias-Molina</h3> <h4>Universidad Politécnica de Madrid</h4> <h5>ana.iglesiasm (at) upm.es</h5>
+              <p>Ana Iglesias-Molina is a PhD student at the Ontology Engineering Group - UPM under the supervision of Prof. Oscar Corcho. Her research is focused on knowledge graph construction and management with declarative mapping languages, ontology engineering, and knowledge representation. She participated in the organization and presented in two tutorials on Knowledge Graph Construction (ISWC2020, ESWC2022), and since 2023 she is also part of the organization of the Knowledge Graph Construction Workshop (ESWC2023). In the past years she has been teaching Data Science in a Business School Master in Madrid, and Semantic Web courses of Bachelor and Master’s level in Universidad Politécnica de Madrid. She has also been part of the Knowledge Graph Construction Community Group since its foundation.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <img class="rounded-circle" src="static/img/aiglesias.jpeg" width="150px"/>
+
+              <div class="social-icons">
+                <a href="https://twitter.com/_aieme">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ana-iglesias-molina/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Xuemin Duan</h3> <h4>KU Leuven</h4> <h5>xuemin.duan (at) kuleuven.be</h5>
+              <p>Xuemin Duan is a PhD student at KU Leuven under the supervision of Prof. Anastasia Dimou. Her work is mainly focused on the automatic construction and validation of knowledge graphs, and she is currently working on the extraction and integration of SHACL shapes. She has been teaching the lab sessions of various courses at KU Leuven, including Computer Network in the Fall of 2022, Data Engineering in the Fall of 2022, Data and Knowledge Graphs in the Spring of 2023, and Web AI in the Fall of 2023.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <img class="rounded-circle" src="static/img/xduan.png" width="150px"/>
+
+
+              <div class="social-icons">
+                <a href="https://twitter.com/xueminduan">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/xueminduan/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+      </section>
+
+
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="materials">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Materials</span></h2>
+          <div class="subheading mb-3"> All the necessary materials for the tutorial are available at:  <a href="https://github.com/TBD">https://github.com/TBD</a>
+          </div>
+
+          <div class="subheading mb-3">Software</div>
+          <ul class="fa-ul mb-0">
+            <li><strong>Morph-KGC:</strong> KG generation engine optimized for tabular data</li>
+            <li><strong>RML2SHACL:</strong> SHACL shape generator from RML mappings</li>
+          </ul>
+
+
+        </div>
+      </section>
+
+       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="sponsors">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Sponsors</span></h2>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <img class="img-rounded" src="static/img/logoKS.png" width="250px"/>
+            </li>
+              <li class="list-inline-item">
+                <img class="img-rounded" src="static/img/flanders-make.png" width="200px"/>
+              </li>
+          </ul>
+        </div>
+      </section>
+
+
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/resume.min.js"></script>
+
+  </body>
+
+</html>
