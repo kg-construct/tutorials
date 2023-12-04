@@ -1,0 +1,39 @@
+prefixes:
+  rr: http://www.w3.org/ns/r2rml#
+  foaf: http://xmlns.com/foaf/0.1/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  ontology: http://data.sfgov.org/ontology/
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  exfunc: http://example.com/idlab/function/
+  : http://www.ex.org/
+
+mappings:
+  Aircraft:
+    sources:
+      - [sfo-aircraft-tail-numbers-and-models.csv~csv]
+    s: http://www.ex.org/Aircraft/$(aircraft_id)
+    po:
+    - [a, :Aircraft]
+    - [:hasID, $(aircraft_id, xsd:string]
+    - [:hasAircraftModel, ex:AircraftModel/$(aircraft_model)~iri]
+    - [:hasOwningAirline, ex:Airline/$(airline)~iri]
+    - [:hasCreationDate, $(creation_date), xsd:dateTime]
+    - [:hasModificationDate, $(modification_date), xsd:dateTime]
+    - [:hasStatus, $(status), xsd:boolean]
+    - [:hasTailNumber, $(tail_number), xsd:string]
+
+  Airline:
+    sources:
+      - [sfo-aircraft-tail-numbers-and-models.csv~csv]
+    s: http://www.example.org/Airline/$(airline)
+    po:
+    - [a, :Airline]
+    - [:owns, ex:Aircraft/$(aircraft_id)~iri]
+
+  AircraftModel:
+    sources:
+    - [sfo-aircraft-tail-numbers-and-models.csv~csv]
+    s: http://www.ex.org/AircraftModel/$(aircraft_model)
+    po:
+     - [a, :AircraftModel]
