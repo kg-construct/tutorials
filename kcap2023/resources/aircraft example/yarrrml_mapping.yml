@@ -14,13 +14,13 @@ mappings:
       - [data/sfo-aircraft-tail-numbers-and-models.csv~csv]
     s: http://www.ex.org/Aircraft/$(aircraft_id)
     po:
-    - [a, :Aircraft]
+    - [a, ex:Aircraft]
     - [ex:hasID, $(aircraft_id), xsd:string]
     - [ex:hasAircraftModel, ex:AircraftModel/$(aircraft_model)~iri]
     - [ex:hasOwningAirline, ex:Airline/$(airline)~iri]
     - [ex:hasCreationDate, $(creation_date), xsd:dateTime]
     - [ex:hasModificationDate, $(modification_date), xsd:dateTime]
-    - [ex:hasStatus, $(status), xsd:boolean]
+    - [ex:hasStatus, $(status), xsd:string]
     - [ex:hasTailNumber, $(tail_number), xsd:string]
 
   Airline:
@@ -28,7 +28,7 @@ mappings:
       - [data/sfo-aircraft-tail-numbers-and-models.csv~csv]
     s: http://www.example.org/Airline/$(airline)
     po:
-    - [a, :Airline]
+    - [a, ex:Airline]
     - [ex:owns, ex:Aircraft/$(aircraft_id)~iri]
 
   AircraftModel:
@@ -36,4 +36,4 @@ mappings:
     - [data/sfo-aircraft-tail-numbers-and-models.csv~csv]
     s: http://www.ex.org/AircraftModel/$(aircraft_model)
     po:
-     - [a, :AircraftModel]
+     - [a, ex:AircraftModel]
