@@ -1,0 +1,69 @@
+
+Task1: Fill the  < FILL HERE >  to restrict the instances of ex:Aircraft to be IRI.
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://www.ex.org/> .
+
+ex:AircraftShape
+    a sh:NodeShape ;
+    sh:targetClass ex:Aircraft ;
+    sh:nodeKind sh:IRI .
+
+
+
+Task2: Fill the  < FILL HERE >  to restrict the property value of ex:hasAircraftId of instances of ex:Aircraft to be integer.
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://www.ex.org/> .
+
+ex:AircraftShape
+    a sh:NodeShape ;
+    sh:targetClass ex:Aircraft ;
+    sh:property ex:hasAircraftIdShape .
+
+ex:hasAircraftIdShape
+    a sh:PropertyShape ;
+    sh:path ex:hasAircraftId ;
+    sh:datatype xsd:integer .
+
+Task 3:
+
+Fill the  < FILL HERE >  to restrict the property value of ex:hasAircraftModelVersion associated with the ex:Aircraft instances to be IRI,
+
+and require this property value to have one ex:AircraftModelVersion class and must has exactly one ex:hasModelVersion property.
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://www.ex.org/> .
+
+ex:AircraftShape
+    a sh:NodeShape ;
+    sh:targetClass ex:Aircraft ;
+    sh:property ex:hasAircraftModelVersionShape .
+
+ex:hasAircraftModelVersionShape
+    a sh:PropertyShape ;
+    sh:path ex:hasAircraftModelVersion ;
+    sh:nodeKind sh:IRI ;
+    sh:node ex:AircraftModelVersionShape .
+
+ex:AircraftModelVersionShape
+    a sh:NodeShape ;
+    sh:class ex:AircraftModelVersion ;
+    sh:property [
+	sh:path ex:hasModelVersion ;
+	sh:minCount 1] .
+
+
+
+
+
+
+
+
+
+
+
+
