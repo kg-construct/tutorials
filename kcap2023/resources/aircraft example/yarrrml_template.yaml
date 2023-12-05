@@ -5,8 +5,8 @@ prefixes:
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   ontology: http://data.sfgov.org/ontology/
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
-  exfunc: http://example.com/idlab/function/
-  : http://www.ex.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  ex: http://www.ex.org/
 
 mappings:
   Aircraft:
