@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="David Chaves">
+
+    <title>KGC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("October 19, 2024 09:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + " days " //+ hours + "h "+ minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <h3 class="navbar-brand js-scroll-trigger">Time to start:</h3>
+      <h3 id=demo></h3>
+     <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">
+
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/img/profile.jpg" alt="">
+        </span>
+      </a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#program">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#presenters">Presenters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#materials">Materials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a>
+          </li>
+        </ul>
+      </div>
+      <div style="color: white">
+        <a href="https://cost-dkg.eu/">
+        <img src="static/img/resources/dkg.png" width="50px" />
+        <p style="color: white"><strong>Organized by <br>DKG Cost Action</strong></p></a>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" style="text-align:justify">
+        <div class="my-auto">
+          <h1 class="mb-0">
+            <span class="text-primary">How do you construct your Knowledge Graph?</span>
+          </h1>
+          <div class="subheading mb-5">Tutorial at ECAI 2024 - 19th October 2024</div>
+
+          <p class="lead mb-5">
+            More and more knowledge graphs (KGs) are constructed for private use, e.g., Google, or public use, e.g., DBpedia, and Wikidata. These knowledge bases are commonly used to support many AI tasks such as entity recognition, question answering, semantic-data labeling, etc. With the advent of Large Language Models (LLMs), Knowledge Graphs have been positioned as a trustable input source for supporting LLMs in any kind of prompts provided by the users. However, these KGs need to be constructed and maintained, keeping their knowledge up to date and unavailable for effective LLM support. 
+
+            In this tutorial, you will learn best practices for declaratively constructing KGs from heterogeneous input datasets. The tutorial will motivate the necessity of good practices in knowledge management and demonstrate how experts are currently implementing them in real-world projects. The tutorial will be guided by a real use case from the transport domain at the EU level, for integrating several pieces of data and used for route planning across all EU members. At the end of the tutorial, the attendees will be able to set up a sustainable workflow that transforms data in any format into a well-formed and usable KG. 
+          </p>
+
+        </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="program" style="text-align:justify">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Program</span></h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Knowledge Graph Construction</h3>
+              
+              <div class="subheading mb-1">Part I: Getting started with the Semantic Web stack </div>
+
+              <p> We will briefly introduce the main and W3C recommended technologies used for constructing and exploiting knowledge graphs such as RDF, OWL, RDFS, R2RML, or SPARQL.  </p>
+
+              <div class="subheading mb-1">Part II: The RML specification and its possibilities</div>
+
+              <p> Declarative mappings are commonly used for specifying how a dataset can be transformed into an RDF knowledge graph according to the schema provided, usually in the form of an ontology. We present one of the most popular languages used to this end, RML, and the novel features of its most recent release by the W3C.</p>
+
+
+              <div class="subheading mb-1">Part III: Creating declarative mapping rules</div>
+
+              <p> Different approaches for mapping creation will be presented. Then, a guided hands-on session will follow with participants to create rules using the user-friendly serialization for RML, YARRRML.</p>
+
+              <div class="subheading mb-1">Part IV: KG Construction</div>
+
+              <p> Several engines and approaches will be presented with their advantages and disadvantages. We will show how a KG can be materialized or virtualized and what are the best techniques to be used depending on the use case. Finally, attendees will use an engine to materialize its dataset into RDF.</p>
+
+
+            </div>
+
+          </div>
+
+
+        </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="presenters" style="text-align:justify">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Presenters</span></h2>
+
+          <!--<h2 class="mb-5">Part I: Semantic Annotations and Efficient Knowledge Graph Generation</h2>-->
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Ana Iglesias-Molina</h3> <h4>Universidad Politécnica de Madrid</h4> <h5>ana.iglesias (at) upm.es</h5>
+              <p>Ana Iglesias-Molina is a PhD student at the Ontology Engineering Group - UPM. Her research is focused on knowledge graph construction and management with declarative mapping languages, ontology engineering, and knowledge representation. She participated in the organization and presented in three tutorials on Knowledge Graph Construction (ISWC2020, ESWC2022, K-CAP2023), and since 2023 she has also been part of the organization of the Knowledge Graph Construction Workshop (ESWC2023, ESWC2024). In the past years, she has been teaching Data Science at a Business School Master in Madrid, and Semantic Web courses at Bachelor's and Master’s levels at Universidad Politécnica de Madrid. She has also been part of the KG Construction Community Group since its foundation.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <img class="rounded-circle" src="static/img/people/aiglesias.png" width="150px"/>
+
+              <div class="social-icons">
+                <a href="https://twitter.com/_aieme">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/anaigmo">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">David Chaves-Fraga</h3> <h4>Universidade de Santiago de Compostela</h4> <h5>david.chaves (at) .usc.es</h5>
+              <p>Prof. David Chaves-Fraga is an Assistant Professor at the University of Santiago de Compostela. He held a PhD in Artificial Intelligence at the Ontology Engineering Group (Technical University of Madrid) in 2021. His research is mainly focused on data management techniques for knowledge graphs. He is the chair of the W3C Community Group on Knowledge Graph Construction and he has organized three academic tutorials on these topics (ESWC2019, ISWC2020, and ESWC2022). Since 2019, he has also co-organized the International Workshop on Knowledge Graph Construction co-located with the Extended Semantic Web Conference (2019-now). In the past years, he has taught Semantic Web, Knowledge Representation, and Data Management in several university courses at Bachelor's and Master’s levels in UPM and KULeuven. He is the main author of the Spanish national guideline for RDF-KG generation from open data.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <img class="rounded-circle" src="static/img/people/dchaves.jpg" width="150px"/>
+
+              <div class="social-icons">
+                <a href="https://twitter.com/dchavesf">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://davidchavesfraga.com/">
+                  <i class="fab fa-google"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+           <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Anastasia Dimou</h3> <h4>KU Leuven</h4> <h5>anastasia.dimou (at) kuleuven.be</h5>
+              <p>Prof. Anastasia Dimou is tenure track assistant professor at the Declarative Languages and Artificial Intelligence (DTAI), KU Leuven. She received her PhD in 2017 pertaining to high-quality Knowledge Graph (KG) construction from heterogeneous data for which she was awarded the SWSA distinguished dissertation award. Her research interests focus on declarative, (semi-)automated, and efficient KG construction from heterogeneous data. Anastasia is affiliated with Flanders Make, the Flemish research institute for the manufacturing industry, hence her research is often applied to real-world manufacturing use cases. Since 2013, Prof. Dimou was involved in more than 20 research projects and published more than 100 publications. She participated in the OC of ISWC (2021,2022), ESWC (2021-2024), SEMANTICS (2022), the Semantic Publishing Challenge (2015,2016) and the KG construction workshop (20219-now). She has given more than 10 tutorials on KG construction at conferences and companies and she teaches a course on KGs. In 2023, her team and her won the SemTab challenge that benchmarks systems for automated tables annotation with KGs. She is the promotor of the Belgian Network on KGs for Data Integration (KG4DI, w3id.org/ kg4di/), the chair of the W3C Community Group on KG Construction (W3C-KGC), with more than 160 members from all over the world and the science communication officer of the Distributed KGs COST Action (DKG, cost-dkg.eu/) with more than 100 members from more than 30 countries in EU.
+ </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <img class="rounded-circle" src="static/img/people/anastasia.jpg" width="150px"/>
+
+              <div class="social-icons">
+                <a href="https://twitter.com/natadimou">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.kuleuven.be/wieiswie/nl/person/00142590">
+                  <i class="fab fa-google"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="materials">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Materials</span></h2>
+          <div class="subheading mb-3"> All the necessary materials for the tutorial are available at:  
+          </div>
+          <div class="subheading mb-3">Technologies</div>
+          
+          
+
+
+        </div>
+      </section>
+
+       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="sponsors">
+        <div class="my-auto">
+          <h2 class="mb-5"><span class="text-primary">Sponsors</span></h2>
+          <ul class="list-inline">
+            
+           
+          </ul>
+        </div>
+      </section>
+
+
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/resume.min.js"></script>
+
+  </body>
+
+</html>
