@@ -1,0 +1,1 @@
+# Resources for KG Construction Tutorial at ECAI2024
