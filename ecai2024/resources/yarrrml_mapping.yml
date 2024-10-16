@@ -16,12 +16,26 @@ mappings:
     po:
     - [a, ex:Aircraft]
     - [ex:hasID, $(aircraft_id), xsd:string]
-    - [ex:hasAircraftModel, ex:AircraftModel/$(aircraft_model)~iri]
-    - [ex:hasOwningAirline, ex:Airline/$(airline)~iri]
     - [ex:hasCreationDate, $(creation_date), xsd:dateTime]
     - [ex:hasModificationDate, $(modification_date), xsd:dateTime]
     - [ex:hasStatus, $(status), xsd:string]
     - [ex:hasTailNumber, $(tail_number), xsd:string]
+    - p: ex:hasAircraftModel
+      o:
+      - mapping: AircraftModel
+        condition:
+          function: equal
+          parameters:
+            - [str1, $(aircraft_id), s]
+            - [str2, $(aircraft_id), o]
+    - p: ex:hasOwningAirline
+      o:
+      - mapping: Airline
+        condition:
+          function: equal
+          parameters:
+            - [str1, $(aircraft_id), s]
+            - [str2, $(aircraft_id), o]
 
   Airline:
     sources:
@@ -29,7 +43,9 @@ mappings:
     s: http://www.example.org/Airline/$(airline)
     po:
     - [a, ex:Airline]
-    - [ex:owns, ex:Aircraft/$(aircraft_id)~iri]
+    - p: ex:owns
+      o:
+      - mapping: Aircraft
 
   AircraftModel:
     sources:

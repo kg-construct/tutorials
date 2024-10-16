@@ -1,0 +1,182 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ontology: <http://data.sfgov.org/ontology/>.
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix ex: <http://www.ex.org/>.
+@prefix rml: <http://w3id.org/rml/>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix schema: <http://schema.org/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@base <http://example.com/ns#>.
+
+
+<Aircraft_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/refs/heads/main/ecai2024/resources/data/sfo-aircraft-tail-numbers-and-models.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://www.ex.org/Aircraft/{aircraft_id}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant ex:Aircraft;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasID;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "aircraft_id";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasCreationDate;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "creation_date";
+			rr:datatype xsd:dateTime
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasModificationDate;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "modification_date";
+			rr:datatype xsd:dateTime
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasStatus;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "status";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasTailNumber;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "tail_number";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasAircraftModel;
+		];
+		rr:objectMap [
+			a rr:RefObjectMap;
+			rr:parentTriplesMap <AircraftModel_0>;
+			rr:joinCondition [
+				rr:child "aircraft_id";
+				rr:parent "aircraft_id";
+			];
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:hasOwningAirline;
+		];
+		rr:objectMap [
+			a rr:RefObjectMap;
+			rr:parentTriplesMap <Airline_0>;
+			rr:joinCondition [
+				rr:child "aircraft_id";
+				rr:parent "aircraft_id";
+			];
+		];
+	].
+
+
+<Airline_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/refs/heads/main/ecai2024/resources/data/sfo-aircraft-tail-numbers-and-models.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://www.example.org/Airline/{airline}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant ex:Airline;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant ex:owns;
+		];
+		rr:objectMap [
+			a rr:RefObjectMap;
+			rr:parentTriplesMap <Aircraft_0>;
+
+		]
+	].
+
+
+<AircraftModel_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "https://raw.githubusercontent.com/kg-construct/tutorials/refs/heads/main/ecai2024/resources/data/sfo-aircraft-tail-numbers-and-models.csv";
+		rml:referenceFormulation ql:CSV
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://www.ex.org/AircraftModel/{aircraft_model}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant ex:AircraftModel;
+		];
+	].
+
+
