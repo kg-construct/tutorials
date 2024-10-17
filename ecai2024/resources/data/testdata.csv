@@ -1,0 +1,5 @@
+"aircraft_id","aircraft_model","airline","creation_date","modification_date","status","tail_number"
+"1547","CRJ-700","Skywest Airlines","2009-09-10T16:33:00.000","2017-10-25T08:59:00.000","Inactive","N637CA"
+"11971","E175-","Skywest Airlines","2018-04-23T08:34:00.000",,"Active","N205SY"
+"11957","B747-400","KLM Royal Dutch Airlines","2018-04-14T16:49:00.000",,"Active","PHBFB"
+"11911","B737-700","Southwest Airlines","2018-03-17T17:20:00.000",,"Active","N968WN"
